@@ -13,7 +13,7 @@ jobs:
       RunAsPreJob: false
   # Use the secret
   - script: |
-      echo ${my-secret}  # Replace with the name of your secret
+      echo $(my-secret)  # Replace with the name of your secret
       # Use the secret in your script or pass it to other tasks
     
 
