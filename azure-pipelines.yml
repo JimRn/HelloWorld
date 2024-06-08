@@ -5,3 +5,15 @@ jobs:
   steps:
   - script: echo hello from Linux
 
+  - task: AzureKeyVault@2
+    inputs:
+      azureSubscription: 'yq'
+      KeyVaultName: 'yeqing'
+      SecretsFilter: '*'
+      RunAsPreJob: false
+  # Use the secret
+  - script: |
+      echo ${my-secret}  # Replace with the name of your secret
+      # Use the secret in your script or pass it to other tasks
+    
+
